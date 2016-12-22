@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2012-2014, The MITRE Corporation, All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<manifest>
+
+  <remote name="aosp"
+          fetch="https://android.googlesource.com/" />
+
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <remote name="svmp"
+          fetch="https://github.com/SVMP/" />
+
+  <default revision="refs/tags/android-4.4.4_r2"
+           remote="aosp"
+           sync-j="4" />
+
+  <!-- SVMP -->
+
+  <project path="device/mitre/svmp" remote="svmp" revision="master" name="android_device_mitre_svmp" >
+    <copyfile src="build-svmp.sh" dest="build-svmp.sh" />
+  </project>
+  <project path="external/svmp/svmpd" remote="svmp" revision="master" name="android_external_svmp_eventserver" />
+  <project path="external/svmp/svmp-protocol-def" remote="svmp" revision="master" name="svmp-protocol-def" />
+
+  <!-- SVMP: mainline android projects we patched -->
+  <project path="bootable/diskinstaller" remote="svmp" revision="svmp-2.x" name="android_bootable_diskinstaller" />
+  <project path="external/grub" remote="svmp" revision="svmp-2.x" name="android_external_grub" />
+  <project path="frameworks/base" remote="svmp" revision="svmp-2.x" name="android_frameworks_base" />
+  <project path="frameworks/native" remote="svmp" revision="svmp-2.x" name="android_frameworks_native" groups="pdk" />
+  <project path="hardware/libhardware_legacy" remote="svmp" revision="svmp-2.x" name="android_hardware_libhardware_legacy" groups="pdk" />
+  <project path="system/core" remote="svmp" revision="svmp-2.x" name="android_system_core" groups="pdk" />
+
+  <!-- SVMP Extra external dependancies -->
+  <project path="kernel/android" remote="svmp" revision="svmp-2.x" name="android-kernel" />
+</manifest>
