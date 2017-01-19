@@ -36,13 +36,13 @@ limitations under the License.
   <project path="external/svmp/svmp-protocol-def" remote="svmp" revision="master" name="svmp-protocol-def" />
 
   <!-- SVMP: mainline android projects we patched -->
-  <project path="bootable/diskinstaller" remote="svmp" revision="svmp-2.x" name="android_bootable_diskinstaller" />
-  <project path="external/grub" remote="svmp" revision="svmp-2.x" name="android_external_grub" />
-  <project path="frameworks/base" remote="svmp" revision="svmp-2.x" name="android_frameworks_base" />
-  <project path="frameworks/native" remote="svmp" revision="svmp-2.x" name="android_frameworks_native" groups="pdk" />
-  <project path="hardware/libhardware_legacy" remote="svmp" revision="svmp-2.x" name="android_hardware_libhardware_legacy" groups="pdk" />
-  <project path="system/core" remote="svmp" revision="svmp-2.x" name="android_system_core" groups="pdk" />
+  <project path="bootable/diskinstaller" remote="svmp" revision="svmp-2.0.0" name="android_bootable_diskinstaller" />
+  <project path="external/grub" remote="svmp" revision="svmp-2.0.0" name="android_external_grub" />
+  <project path="frameworks/base" remote="svmp" revision="svmp-2.0.0" name="android_frameworks_base" />
+  <project path="frameworks/native" remote="svmp" revision="svmp-2.0.0" name="android_frameworks_native" groups="pdk" />
+  <project path="hardware/libhardware_legacy" remote="svmp" revision="svmp-2.0.0" name="android_hardware_libhardware_legacy" groups="pdk" />
+  <project path="system/core" remote="svmp" revision="svmp-2.0.0" name="android_system_core" groups="pdk" />
 
   <!-- SVMP Extra external dependancies -->
-  <project path="kernel/android" remote="svmp" revision="svmp-2.x" name="android-kernel" />
+  <project path="kernel/android" remote="svmp" revision="svmp-2.0.0" name="android-kernel" />
 </manifest>
